@@ -1,29 +1,50 @@
-# vue-p
+# 家居商城前端（课程练习）
 
-## Project setup
-```
+这是一个在课程学习中完成的家居商城前端项目，使用 Vue 2、Vue Router 和 Vuex。项目用于记录前端页面、状态管理和本地 API 对接练习，不是仍在维护的线上商城。
+
+## 功能
+
+- 首页与商品分类浏览
+- 商品列表和商品详情
+- 购物车：调整商品数量、选择或删除商品、计算金额
+- 结算页面与模拟收货地址展示
+- 使用 Vuex 管理购物车状态，并将状态保存在当前浏览器会话中
+- 通过本地 Koa 服务读取分类、商品和地址模拟数据
+
+## 课程练习中的个人调整
+
+- 补充和调整购物车、结算页面及其页面路由。
+- 完善 Vuex 中的购物车状态处理，包括商品数量、勾选状态和合计金额。
+- 将分类、商品和地址页面数据接入配套的本地 Koa API。
+- 调整相关页面样式与交互。
+
+以上内容根据仓库提交记录和当前代码整理；这是课程引导下的学习项目。
+
+## 技术栈
+
+- Vue 2
+- Vue Router 3
+- Vuex 3
+- Axios
+- Vue CLI 4
+
+## 本地运行
+
+需要安装 Node.js 和 npm。前端依赖配套的 [Koa 后端](https://github.com/ceinez/Home-Goods-Mall-back-end)，请先启动后端服务，再启动前端。
+
+```bash
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+前端默认运行在 `http://localhost:8080`，请求的后端地址为 `http://localhost:3000`。
+
+生产构建：
+
+```bash
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
+## 项目说明
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+当前配套后端版本没有数据库连接配置；商品分类、商品和地址由后端 JavaScript 文件中的模拟数据提供。项目没有真实支付或持久化订单流程，保留为课程学习记录，暂不持续维护。
